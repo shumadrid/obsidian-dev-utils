@@ -63,7 +63,7 @@ Checks if Svelte code compiles.
 #### Compile TypeScript code
 
 ```bash
-npx obsidian-dev-utils build:compile:typeScript
+npx obsidian-dev-utils build:compile:typescript
 ```
 
 Checks if TypeScript code compiles.
@@ -106,7 +106,7 @@ Checks formatting of your code using [dprint](https://dprint.dev/).
 npx obsidian-dev-utils lint
 ```
 
-This command is looking for `eslint.config.mjs` file in the root of your project and if it's not found, it creates it referencing the default configuration.
+This command is looking for `eslint.config.js/mjs/cjs/ts/mts/cts` file in the root of your project and if it's not found, it creates it referencing the default configuration.
 
 Lints your code, enforcing a code convention to minimize common errors.
 
@@ -156,11 +156,17 @@ To simplify the usage of these commands, you can add them to your `package.json`
 {
   "scripts": {
     "build": "obsidian-dev-utils build",
+    "build:compile": "obsidian-dev-utils build:compile",
+    "build:compile:svelte": "obsidian-dev-utils build:compile:svelte",
+    "build:compile:typescript": "obsidian-dev-utils build:compile:typescript",
     "build:clean": "obsidian-dev-utils build:clean",
     "build:static": "obsidian-dev-utils build:static",
     "dev": "obsidian-dev-utils dev",
+    "format": "obsidian-dev-utils format",
+    "format:check": "obsidian-dev-utils format:check",
     "lint": "obsidian-dev-utils lint",
     "lint:fix": "obsidian-dev-utils lint:fix",
+    "publish": "obsidian-dev-utils publish",
     "spellcheck": "obsidian-dev-utils spellcheck",
     "version": "obsidian-dev-utils version"
   },

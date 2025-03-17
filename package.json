@@ -1,6 +1,6 @@
 {
   "name": "obsidian-dev-utils",
-  "version": "19.10.0",
+  "version": "19.12.0",
   "description": "This is the collection of useful functions that you can use for your Obsidian plugin development",
   "keywords": [
     "obsidian"
@@ -406,7 +406,7 @@
   ],
   "scripts": {
     "build": "npm-run-all build:clean build:compile build:generate-index build:types build:lib build:generate-exports build:static build:styles",
-    "build:clean": "tsx scripts/build-clean.ts",
+    "build:clean": "tsx scripts/cli.ts build:clean",
     "build:compile": "tsx scripts/cli.ts build:compile",
     "build:generate-exports": "tsx scripts/build-generate-exports.ts",
     "build:generate-index": "tsx scripts/build-generate-index.ts",
@@ -419,7 +419,6 @@
     "lint": "tsx scripts/cli.ts lint",
     "lint:fix": "tsx scripts/cli.ts lint:fix",
     "spellcheck": "tsx scripts/cli.ts spellcheck",
-    "test": "tsx scripts/test.ts",
     "version": "tsx scripts/version.ts"
   },
   "dependencies": {
@@ -451,16 +450,17 @@
     "enhanced-resolve": "^5.18.1",
     "esbuild": "^0.25.1",
     "esbuild-sass-plugin": "^3.3.1",
-    "esbuild-svelte": "^0.9.1",
+    "esbuild-svelte": "^0.9.2",
     "eslint": "^9.22.0",
-    "eslint-import-resolver-typescript": "^3.8.4",
-    "eslint-plugin-import-x": "^4.6.1",
+    "eslint-import-resolver-typescript": "^3.9.0",
+    "eslint-plugin-import-x": "^4.7.1",
     "eslint-plugin-modules-newlines": "^0.0.7",
     "eslint-plugin-perfectionist": "^4.10.1",
     "eslint-plugin-tsdoc": "^0.4.0",
     "eslint-plugin-verify-tsdoc": "^1.0.20",
     "eventemitter3": "^5.0.1",
     "glob": "^11.0.1",
+    "jiti": "^2.4.2",
     "localforage": "^1.10.0",
     "lru-cache": "^11.0.2",
     "moment": "^2.30.1",

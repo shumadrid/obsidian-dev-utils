@@ -13,6 +13,7 @@ import type {
 
 import { config } from 'dotenv';
 import { context } from 'esbuild';
+// eslint-disable-next-line import-x/no-rename-default
 import sassPlugin_ from 'esbuild-sass-plugin';
 
 import { throwExpression } from '../../Error.ts';
@@ -38,7 +39,7 @@ import { preprocessPlugin } from './preprocessPlugin.ts';
 import { renameCssPlugin } from './renameCssPlugin.ts';
 import { svelteWrapperPlugin } from './svelteWrapperPlugin.ts';
 
-const sassPlugin = sassPlugin_ as unknown as typeof sassPlugin_.default;
+const sassPlugin = ('default' in sassPlugin_ ? sassPlugin_.default : sassPlugin_) as unknown as typeof sassPlugin_.default;
 
 /**
  * Enumeration representing the build modes.
