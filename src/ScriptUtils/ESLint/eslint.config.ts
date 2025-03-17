@@ -51,7 +51,7 @@ export const configs: Linter.Config[] = tseslint.config(
   ...getTseslintConfigs(),
   ...getStylisticConfigs(),
   ...getImportXConfigs(),
-  ...getPerfectionistConfigs(),
+  // ...getPerfectionistConfigs(),
   ...getModulesNewlinesConfigs(),
   ...getModulesNewlinesConfigs(),
   ...getEslintImportResolverTypescriptConfigs()

@@ -422,7 +422,7 @@ export async function updateVersion(versionUpdateType?: string, prepareGitHubRel
   await checkGitInstalled();
   await checkGitRepoClean();
   await checkGitHubCliInstalled();
-  // await runCommand('format:check');
+  await runCommand('format:check');
   await runCommand('spellcheck');
   await runCommand('build');
   await runCommand('lint');
@@ -516,7 +516,7 @@ async function updateVersionInFilesForPlugin(newVersion: string): Promise<void> 
       manifest.version = newVersion;
     });
   } else {
-    const latestObsidianVersion = "1.7.2";
+    const latestObsidianVersion = '1.7.2';
 
     await editJson<Manifest>(ObsidianPluginRepoPaths.ManifestJson, (manifest) => {
       manifest.minAppVersion = latestObsidianVersion;
